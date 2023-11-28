@@ -83,4 +83,33 @@ a = [4, 1, 2, 1, 0, 2]
 p a.uniq
 
 arr = ["India", "indIA", "JAPAN", "jApAn", "China"]
-p arr.uniq { |element| element new_variable = downcase}
+p arr.uniq { |element| element.downcase}
+
+puts "array slicing".center(40, "-")
+a = ["abc", :sym, 2.45, 1/4r]
+p a.values_at(0, 2..3, -4, -3)
+
+puts "product".center(40, '-')
+p nums
+a1 = ["a","b"]
+p a1
+puts "Product = #{nums.product(a1)}"
+
+puts "Permutations-Combinations".center(40, "-")
+p nums
+puts "Permutation with repeat"
+nums.repeated_permutation(2) {|permutation| p permutation}
+puts "Permutations no repeat"
+nums.permutation(2) {|permutation| p permutation}
+
+puts "zip multiple arrays".center(40, "-")
+a = [:a0, :a1, :a2, :a3]
+b = [:b0, :b1, :b2]
+c = [:c0, :c1]
+p a
+p b
+p c
+d = a.zip(b, c)
+p "zip = #{d}"
+
+

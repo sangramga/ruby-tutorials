@@ -21,6 +21,8 @@ mat1 = Matrix.identity(3)
 p mat1
 
 # index
+puts "Indexing slicing".center(40, "-")
+p users
 p users[2]
 
 # slicing arrays
@@ -29,3 +31,5 @@ p users[1..3]
 p users[2...]
 
 p users.last(2)
+
+p users[(1..).step(2)]
