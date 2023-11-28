@@ -59,3 +59,28 @@ p a.collect { |item| item.class }
 puts "File iterator".center(40, "-")
 p Dir.entries(Dir.pwd)
 p Dir.glob("*rb")
+
+# Convert 2d array to hash map
+puts "array-to-hash".center(40, "-")
+a = [["a",1], ["d",4], ["h",8]]
+p a
+p a.to_h
+
+arr = ["India", "Australia", "USA"]
+p arr
+p arr.to_h { |country| [country, country[..1].downcase()]}
+
+puts "take".center(40, "-")
+p a
+p a.take(1)
+
+puts "Transpose".center(40, "-")
+p a
+p a.transpose
+
+puts "uniq".center(40, "-")
+a = [4, 1, 2, 1, 0, 2]
+p a.uniq
+
+arr = ["India", "indIA", "JAPAN", "jApAn", "China"]
+p arr.uniq { |element| element new_variable = downcase}
