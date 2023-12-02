@@ -61,3 +61,13 @@ ext.each {|key, value| puts "#{key} : #{value}" }
 ext.each_with_index do |key_value_pair, ind|
     puts "ind = #{ind}, key_value_pair = #{key_value_pair}"
 end
+
+puts "Merge/Update Hashes".center(40, "-")
+
+priority_hash = {item1: 0, item2: 1}
+p_hash1 = {item3: 9, item4: 13}
+p_hash2 = {item3: 3, item4: 4}
+p priority_hash.merge(p_hash1)
+
+# Merge with adding keys
+p Hash.new.merge(p_hash1, p_hash2) {|key, old_value, new_value| old_value + new_value}
